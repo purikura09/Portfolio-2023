@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,6 +13,8 @@
     <link href="lightbox.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        body,
+html { overflow-x: hidden; }
       html {
         scroll-behavior: smooth;
       }
@@ -75,6 +78,27 @@
           display: none;
         }
       }
+      .bar {
+  width: 100%;
+  color: #2B2D3A;
+  opacity: .7;
+}
+
+.bar_content {
+  display: block; /* Important to give the content a width */
+  width: 100%;
+  transform: translateX(100%); /* Animation start out of the screen */
+
+  /* Add the animation */
+  animation: move 20s linear infinite /* infinite make reapeat the animation indefinitely */;
+}
+
+/* Create the animation */
+@keyframes move {
+  to { transform: translateX(-100%); }
+}
+
+
     </style>
   </head>
 
@@ -84,9 +108,9 @@
         <nav
           class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a href="#home" class="text-center mx-5"> <p>Home</p> </a>
-          <a href="#portfolio" class="text-center mx-5"><p>Portfolio</p> </a>
-          <a href="#about" class="text-center mx-5"><p>About me</p> </a>
+          <a href="#home" class="text-center mx-5"> <p>HOME</p> </a>
+          <a href="#portfolio" class="text-center mx-5"><p>PORTFOLIO</p> </a>
+          <a href="#about" class="text-center mx-5"><p>ABOUT ME</p> </a>
         </nav>
       </div>
     </header>
@@ -133,14 +157,32 @@
             /></a>
           </li>
         </ul>
+        <br>
+        <center>
+             <a href="#portfolio">
+        <svg class="animate-bounce" width="36" height="57" viewBox="0 0 36 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1C27.3888 1 35 7.71573 35 16L35 41C35 49.2843 27.3888 56 18 56C8.61116 56 1.00001 49.2843 1.00001 41L1 16C1 7.71573 8.61116 1 18 1Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M18 42L23.7735 32L12.2265 32L18 42ZM19 33L19 15L17 15L17 33L19 33Z" fill="white"/>
+            </svg>
+            </a>
+        </center>
+       
       </div>
+      
     </section>
 
     <!--SECTION 2-->
     <section id="portfolio">
+ 
       <div class="mx-auto max-w-3xl px-6 py-12 text-center">
+        <div class="bar">
+            <span class="bar_content">
+                <h1 class="text-5xl font-semibold py-2 tracking-wide" id="scroll-text">PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO</h1>
+            </span>
+          </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-          <div class="px-8 py-16" style="background-color: #e3e9f0">
+          <div id="gallery" class="px-8 py-16" style="background-color: #e3e9f0">
             <a href="img/CG 1.jpg" data-lightbox="canada">
               <svg
                 class="mx-auto"
@@ -638,7 +680,7 @@
       <div class="text-center text-slate-50 px-12">
         <div>
           <img class="mx-auto py-4" src="img/me.jpg" />
-          <h1 class="text-3xl font-semibold py-4">Story</h1>
+          <h1 class="text-5xl font-semibold py-4 tracking-wide">STORY</h1>
           <p>
             My passion for art & design began in my early years. I went to the
             Art School in Geneva and studied Visual Arts & Interior Design.
@@ -651,8 +693,9 @@
             acquired a solid experience in the field and more.
           </p>
         </div>
+        <br>
         <div>
-          <h1 class="text-3xl font-semibold py-4">Skills</h1>
+          <h1 class="text-3xl font-semibold py-4 tracking-wide">SKILLS</h1>
           <ul class="mb-6">
             <li class="inline-block bg-zinc-500 p-2 px-4 m-2 rounded-full">
               <p class="text-base">UI | UX design</p>
@@ -676,8 +719,9 @@
             </li>
           </ul>
         </div>
+        <br>
         <div>
-          <h1 class="text-3xl font-semibold py-4">What I &#9829;</h1>
+          <h1 class="text-3xl font-semibold py-4 tracking-wide">WHAT I &#9829;</h1>
           <ul class="mb-6">
             <li class="inline-block bg-zinc-500 p-2 px-4 m-2 rounded-full">
               <p class="text-base">Movies</p>
