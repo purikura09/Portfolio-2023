@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,11 +12,15 @@
     <link href="lightbox.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body,
-html { overflow-x: hidden; }
+      body,
+      html {
+        overflow-x: hidden;
+      }
+
       html {
         scroll-behavior: smooth;
       }
+
       h1,
       h2,
       p {
@@ -41,6 +44,7 @@ html { overflow-x: hidden; }
         zoom: 80%;
         animation: float 6s ease-in-out infinite;
       }
+
       @keyframes myAnim {
         0% {
           opacity: 0;
@@ -52,53 +56,158 @@ html { overflow-x: hidden; }
           transform: scale(1);
         }
       }
+
       @keyframes float {
         0% {
           transform: translatey(0px);
         }
+
         50% {
           transform: translatey(-20px);
         }
+
         100% {
           transform: translatey(0px);
         }
       }
+
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
         #home {
           padding-bottom: 15px;
           padding-top: 120px;
         }
+
         #logo {
           zoom: 60%;
         }
+
         #social {
           zoom: 80%;
         }
+
         p br {
           display: none;
         }
+
+        #scroll-button {
+          display: none;
+        }
       }
+
       .bar {
-  width: 100%;
-  color: #2B2D3A;
-  opacity: .7;
-}
+        width: 100%;
+        color: #2b2d3a;
+        opacity: 0.7;
+      }
 
-.bar_content {
-  display: block; /* Important to give the content a width */
-  width: 100%;
-  transform: translateX(100%); /* Animation start out of the screen */
+      .circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
 
-  /* Add the animation */
-  animation: move 20s linear infinite /* infinite make reapeat the animation indefinitely */;
-}
+      .circles li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animate 25s linear infinite;
+        bottom: -150px;
+      }
 
-/* Create the animation */
-@keyframes move {
-  to { transform: translateX(-100%); }
-}
+      .circles li:nth-child(1) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
+      }
 
+      .circles li:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
+      }
 
+      .circles li:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
+      }
+
+      .circles li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
+      }
+
+      .circles li:nth-child(5) {
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+      }
+
+      .circles li:nth-child(6) {
+        left: 75%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3s;
+      }
+
+      .circles li:nth-child(7) {
+        left: 35%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 7s;
+      }
+
+      .circles li:nth-child(8) {
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+      }
+
+      .circles li:nth-child(9) {
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+      }
+
+      .circles li:nth-child(10) {
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
+      }
+
+      @keyframes animate {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+          border-radius: 0;
+        }
+
+        100% {
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+          border-radius: 50%;
+        }
+      }
     </style>
   </head>
 
@@ -108,9 +217,17 @@ html { overflow-x: hidden; }
         <nav
           class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
         >
-          <a href="#home" class="text-center mx-5"> <p>HOME</p> </a>
-          <a href="#portfolio" class="text-center mx-5"><p>PORTFOLIO</p> </a>
-          <a href="#about" class="text-center mx-5"><p>ABOUT ME</p> </a>
+          <a href="#home" class="text-center mx-2">
+            <p class="font-semibold">HOME</p>
+          </a>
+          <p>|</p>
+          <a href="#portfolio" class="text-center mx-2">
+            <p class="font-semibold">PORTFOLIO</p>
+          </a>
+          <p>|</p>
+          <a href="#about" class="text-center mx-2">
+            <p class="font-semibold">ABOUT ME</p>
+          </a>
         </nav>
       </div>
     </header>
@@ -157,32 +274,57 @@ html { overflow-x: hidden; }
             /></a>
           </li>
         </ul>
-        <br>
+        <br />
         <center>
-             <a href="#portfolio">
-        <svg class="animate-bounce" width="36" height="57" viewBox="0 0 36 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1C27.3888 1 35 7.71573 35 16L35 41C35 49.2843 27.3888 56 18 56C8.61116 56 1.00001 49.2843 1.00001 41L1 16C1 7.71573 8.61116 1 18 1Z" stroke="white" stroke-width="2" stroke-linecap="round"/>
-            <path d="M18 42L23.7735 32L12.2265 32L18 42ZM19 33L19 15L17 15L17 33L19 33Z" fill="white"/>
+          <a href="#portfolio">
+            <svg
+              id="scroll-button"
+              class="animate-bounce"
+              width="36"
+              height="57"
+              viewBox="0 0 36 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18 1C27.3888 1 35 7.71573 35 16L35 41C35 49.2843 27.3888 56 18 56C8.61116 56 1.00001 49.2843 1.00001 41L1 16C1 7.71573 8.61116 1 18 1Z"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M18 42L23.7735 32L12.2265 32L18 42ZM19 33L19 15L17 15L17 33L19 33Z"
+                fill="white"
+              />
             </svg>
-            </a>
+          </a>
         </center>
-       
+        <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
-      
     </section>
 
     <!--SECTION 2-->
     <section id="portfolio">
- 
       <div class="mx-auto max-w-3xl px-6 py-12 text-center">
-        <div class="bar">
-            <span class="bar_content">
-                <h1 class="text-5xl font-semibold py-2 tracking-wide" id="scroll-text">PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO&nbsp;&nbsp;PORTFOLIO</h1>
-            </span>
-          </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-          <div id="gallery" class="px-8 py-16" style="background-color: #e3e9f0">
+          <div
+            id="gallery"
+            class="px-8 py-16"
+            style="background-color: #e3e9f0"
+          >
             <a href="img/CG 1.jpg" data-lightbox="canada">
               <svg
                 class="mx-auto"
@@ -197,85 +339,111 @@ html { overflow-x: hidden; }
                   .line-3d-printing1-overall {
                     animation: line-3d-printing1-overall 10s infinite;
                   }
+
                   @keyframes line-3d-printing1-overall {
                     0% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     10% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     15% {
                       transform: translate3d(0, 14px, 0);
                     }
+
                     35% {
                       transform: translate3d(0, 14px, 0);
                     }
+
                     40% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     65% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     70% {
                       transform: translate3d(0, 14px, 0);
                     }
+
                     85% {
                       transform: translate3d(0, 14px, 0);
                     }
+
                     90% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     100% {
                       transform: translate3d(0, 0, 0);
                     }
                   }
+
                   .line-3d-printing1-tool {
                     animation: line-3d-printing1-tool 10s infinite;
                   }
+
                   @keyframes line-3d-printing1-tool {
                     0% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     10% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     15% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     20% {
                       transform: translate3d(-3px, 0, 0);
                     }
+
                     25% {
                       transform: translate3d(3px, 0, 0);
                     }
+
                     30% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     45% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     55% {
                       transform: translate3d(0, 0, 0);
                     }
+
                     65% {
                       transform: translate3d(-25px, 0, 0);
                     }
+
                     75% {
                       transform: translate3d(-25px, 0, 0);
                     }
+
                     80% {
                       transform: translate3d(-20px, 0, 0);
                     }
+
                     85% {
                       transform: translate3d(-25px, 0, 0);
                     }
+
                     90% {
                       transform: translate3d(-25px, 0, 0);
                     }
+
                     100% {
                       transform: translate3d(0, 0, 0);
                     }
                   }
+
                   @media (prefers-reduced-motion: reduce) {
                     .line-3d-printing1-overall,
                     .line-3d-printing1-tool {
@@ -393,8 +561,8 @@ html { overflow-x: hidden; }
               <h2 class="text-2xl font-semibold" style="color: #2a404d">
                 Canada Goose
               </h2>
-              <p>Brand media, Social media, Digital Marketing & Retail</p></a
-            >
+              <p>Brand media, Social media, Digital Marketing & Retail</p>
+            </a>
             <a href="img/CG 2.jpg" data-lightbox="canada"></a>
             <a href="img/CG 3.jpg" data-lightbox="canada"></a>
             <a href="img/CG 4.jpg" data-lightbox="canada"></a>
@@ -417,32 +585,40 @@ html { overflow-x: hidden; }
                     animation: line-grid1-draw 4s infinite;
                     stroke-dasharray: 180;
                   }
+
                   .line-grid1-b {
                     animation: line-grid1-draw 2s infinite;
                     stroke-dasharray: 180;
                   }
+
                   .line-grid1-c {
                     animation: line-grid1-draw 2s infinite;
                     stroke-dasharray: 180;
                   }
+
                   .line-grid1-d {
                     animation: line-grid1-draw 4s infinite;
                     stroke-dasharray: 180;
                   }
+
                   @keyframes line-grid1-draw {
                     0% {
                       stroke-dashoffset: 180;
                     }
+
                     20% {
                       stroke-dashoffset: 180;
                     }
+
                     60% {
                       stroke-dashoffset: 0;
                     }
+
                     100% {
                       stroke-dashoffset: 0;
                     }
                   }
+
                   @media (prefers-reduced-motion: reduce) {
                     .line-grid1-a,
                     .line-grid1-b,
@@ -492,7 +668,7 @@ html { overflow-x: hidden; }
               <p>
                 Web application, Digital Marketing, <br />
                 E-commerce & Social Media
-              </p></a
+              </p> </a
             ><a href="img/Weblo 2.jpg" data-lightbox="weblo"></a>
             <a href="img/Weblo 3.jpg" data-lightbox="weblo"></a>
             <a href="img/Weblo 4.jpg" data-lightbox="weblo"></a>
@@ -512,26 +688,33 @@ html { overflow-x: hidden; }
                     animation: line-heart1-pulse 2s infinite;
                     transform-origin: 50px 50px;
                   }
+
                   @keyframes line-heart1-pulse {
                     0% {
                       transform: scale3d(1, 1, 1);
                     }
+
                     20% {
                       transform: scale3d(0.9, 0.9, 0.9);
                     }
+
                     35% {
                       transform: scale3d(1, 1, 1);
                     }
+
                     50% {
                       transform: scale3d(0.9, 0.9, 0.9);
                     }
+
                     75% {
                       transform: scale3d(1, 1, 1);
                     }
+
                     100% {
                       transform: scale3d(1, 1, 1);
                     }
                   }
+
                   @media (prefers-reduced-motion: reduce) {
                     .line-heart1 {
                       animation: none;
@@ -591,7 +774,7 @@ html { overflow-x: hidden; }
               </h2>
               <p>
                 Mobile application: user experience, user interface & prototype
-              </p></a
+              </p> </a
             ><a href="img/PH_2.jpg" data-lightbox="pocket"></a>
             <a href="img/PH_3.jpg" data-lightbox="pocket"></a>
             <a href="img/PH_4.jpg" data-lightbox="pocket"></a>
@@ -611,14 +794,17 @@ html { overflow-x: hidden; }
                     animation: line-rocket1-flame 200ms infinite linear;
                     transform-origin: 34px 70px;
                   }
+
                   @keyframes line-rocket1-flame {
                     0% {
                       transform: scale(1);
                     }
+
                     50% {
                       transform: scale(1.5);
                     }
                   }
+
                   @media (prefers-reduced-motion: reduce) {
                     .line-rocket1 {
                       animation: none;
@@ -665,7 +851,7 @@ html { overflow-x: hidden; }
               <h2 class="text-2xl font-semibold" style="color: #4e442a">
                 More
               </h2>
-              <p>Branding, Website & Illustration</p></a
+              <p>Branding, Website & Illustration</p> </a
             ><a href="img/More_2.jpg" data-lightbox="more"></a>
           </div>
         </div>
@@ -680,7 +866,7 @@ html { overflow-x: hidden; }
       <div class="text-center text-slate-50 px-12">
         <div>
           <img class="mx-auto py-4" src="img/me.jpg" />
-          <h1 class="text-5xl font-semibold py-4 tracking-wide">STORY</h1>
+          <h1 class="text-3xl font-semibold py-4 tracking-wide">Story</h1>
           <p>
             My passion for art & design began in my early years. I went to the
             Art School in Geneva and studied Visual Arts & Interior Design.
@@ -693,9 +879,9 @@ html { overflow-x: hidden; }
             acquired a solid experience in the field and more.
           </p>
         </div>
-        <br>
+        <br />
         <div>
-          <h1 class="text-3xl font-semibold py-4 tracking-wide">SKILLS</h1>
+          <h1 class="text-2xl font-semibold py-4 tracking-wide">Skills</h1>
           <ul class="mb-6">
             <li class="inline-block bg-zinc-500 p-2 px-4 m-2 rounded-full">
               <p class="text-base">UI | UX design</p>
@@ -719,9 +905,11 @@ html { overflow-x: hidden; }
             </li>
           </ul>
         </div>
-        <br>
+        <br />
         <div>
-          <h1 class="text-3xl font-semibold py-4 tracking-wide">WHAT I &#9829;</h1>
+          <h1 class="text-2xl font-semibold py-4 tracking-wide">
+            What I &#9829;
+          </h1>
           <ul class="mb-6">
             <li class="inline-block bg-zinc-500 p-2 px-4 m-2 rounded-full">
               <p class="text-base">Movies</p>
