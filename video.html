@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link href="lightbox.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+
+        #nav {
+            position: fixed;
+            background-color: #fafafa;
+            width: 100%;
+            z-index: 999;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="nav" class="">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                <a href="index.html#portfolio" class="text-center mx-2">
+                    <p class="font-medium">&#x2190; BACK</p>
+                </a>
+
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="h-screen w-full flex items-center place-content-center">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+            <div id="gallery" class="px-8 py-16" style="background-color: #fafafa">
+
+                <video class="size-96" controls>
+                    <source src="img/Video_1.mp4" type="video/mp4">
+
+                </video>
+
+            </div>
+            <div id="gallery" class="px-8 py-16 " style="background-color: #fafafa">
+
+                <video class="size-96" controls>
+                    <source src="img/Video_2.mp4" type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
