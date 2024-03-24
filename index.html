@@ -75,6 +75,10 @@
       }
     }
 
+    #me {
+      display: none;
+    }
+
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
       #home {
         padding-bottom: 15px;
@@ -98,6 +102,14 @@
       }
 
       .circles {
+        display: none;
+      }
+
+      #me {
+        display: block;
+      }
+
+      #me-1 {
         display: none;
       }
     }
@@ -147,8 +159,8 @@
   <!--SECTION 1-->
   <section id="home" class="h-screen w-full flex items-center place-content-center">
     <div class="text-slate-50 text-center px-12">
-      <!--<img class="mx-auto size-52" src="img/me.gif" />-->
-      <video class="mx-auto size-64" autoplay loop muted>
+      <img id="me" class="mx-auto size-52" src="img/me.png" />
+      <video id="me-1" class="mx-auto size-64" autoplay loop muted>
         <source src="img/me.mp4" type="video/mp4" />
       </video>
 
