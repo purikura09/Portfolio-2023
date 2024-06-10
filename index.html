@@ -7,10 +7,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <link href="lightbox.css" rel="stylesheet" />
+  <!--<link href="lightbox.css" rel="stylesheet" /> -->
+  <link href="uikit.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-
   <style>
     body,
     html {
@@ -33,7 +32,7 @@
       background-color: #1e1e1e;
     }
 
-    #websites {}
+
 
     #website-grid {
       background-color: #fff;
@@ -127,8 +126,6 @@
       opacity: 0.7;
     }
 
-
-
     @keyframes animate {
       0% {
         transform: translateY(0) rotate(0deg);
@@ -167,21 +164,19 @@
   <section id="home" class="h-screen w-full flex items-center place-content-center">
     <div class="text-slate-50 text-center px-12">
       <!-- <img class="m-auto size-52" src="img/me.png">-->
-      <video class="m-auto size-52" autoplay muted loop>
+      <video class=" mx-auto size-52" autoplay muted loop>
         <source src="img/me.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <br />
       <h1 class="text-3xl font-semibold py-2">Hey, I’m Rebecca</h1>
 
-      <h2 class="text-center text-xl">
+      <h2 class="text-center text-xl mb-4">
         Graphic | Web Designer
       </h2>
-      <br />
+
       <p class="text-lg">
-        I'm a multidisciplinary designer who likes to think outside the box <br /> and being
-        challenged in order to bring new solutions.
-        <br />Design is to me all about solving a need and shedding light on a path
+        I'm a multidisciplinary designer who likes to think outside the box and </br> sheds light on a path
         that is trustworthy and enjoyable.
 
 
@@ -196,33 +191,62 @@
           <a href="https://genuine-sprinkles-28ea28.netlify.app/" target="_blank"><img class="size-10"
               src="img/logo_HR.svg" /></a>
         </li>
+        <!--
         <li class="inline-block mx-4">
           <a href="https://dribbble.com/Rbekay" target="_blank"><img class="size-10" src="img/dribble-icon.svg" /></a>
-        </li>
+        </li>-->
       </ul>
       <br />
-      <!--
-      <center>
-        <a href="#portfolio">
-          <svg id="scroll-button" class="animate-bounce" width="36" height="57" viewBox="0 0 36 57" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M18 1C27.3888 1 35 7.71573 35 16L35 41C35 49.2843 27.3888 56 18 56C8.61116 56 1.00001 49.2843 1.00001 41L1 16C1 7.71573 8.61116 1 18 1Z"
-              stroke="white" stroke-width="2" stroke-linecap="round" />
-            <path d="M18 42L23.7735 32L12.2265 32L18 42ZM19 33L19 15L17 15L17 33L19 33Z" fill="white" />
-          </svg>
-          <svg fill="ffffff" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve" stroke="ffffff" transform="rotate(270)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="XMLID_6_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M205.606,234.394 c5.858,5.857,5.858,15.355,0,21.213C202.678,258.535,198.839,260,195,260s-7.678-1.464-10.606-4.394l-80-79.998 c-2.813-2.813-4.394-6.628-4.394-10.606c0-3.978,1.58-7.794,4.394-10.607l80-80.002c5.857-5.858,15.355-5.858,21.213,0 c5.858,5.857,5.858,15.355,0,21.213l-69.393,69.396L205.606,234.394z"></path> </g></svg>
-        </a>
-      </center>-->
+
     </div>
 
   </section>
+  <!--
+  <section id="home" class="h-screen w-full flex items-center place-content-center">
+
+    <div class="grid grid-cols-2 grid-rows-2">
+      <div class="row-span-2"> <video class="m-auto size-80" autoplay muted loop>
+          <source src="img/me.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video></div>
+      <div class="row-span-2">
+        <h1 class="text-3xl font-semibold py-2">Hey, I’m Rebecca</h1>
+
+        <h2 class="text-left text-xl">
+          Graphic | Web Designer
+        </h2>
+        <br />
+        <p class="text-lg">
+          I'm a multidisciplinary designer who likes to think outside the box and </br> sheds light on a path
+          that is trustworthy and enjoyable.
+
+
+        </p>
+        <ul id="social" class="py-6">
+
+          <li class="inline-block mr-4">
+            <a href="https://www.instagram.com/little_things_ch/" target="_blank"><img class="size-10"
+                src="img/ig-icon.svg" /></a>
+          </li>
+          <li class="inline-block mx-4">
+            <a href="https://genuine-sprinkles-28ea28.netlify.app/" target="_blank"><img class="size-10"
+                src="img/logo_HR.svg" /></a>
+          </li>
+          <li class="inline-block mx-4">
+            <a href="https://dribbble.com/Rbekay" target="_blank"><img class="size-10" src="img/dribble-icon.svg" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </section>-->
+
 
   <!--SECTION 2-->
   <section id="portfolio">
     <div class="mx-auto max-w-3xl px-6 py-12 text-center">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
-        <div id="gallery" class="px-8 py-16" style="background-color: #e3e9f0">
+        <div uk-lightbox id="gallery" class="px-8 py-16" style="background-color: #e3e9f0">
           <a href="img/CG 1.gif" data-lightbox="canada">
             <svg class="mx-auto" width="100" height="100" viewBox="0 0 100 100" fill="none"
               xmlns="http://www.w3.org/2000/svg" style="width: 112px; height: 112px">
@@ -387,8 +411,8 @@
           <a href="img/CG 5.jpg" data-lightbox="canada"></a>
 
         </div>
-        <div class="px-8 py-16" style="background-color: #f1ebe2">
-          <a href="video.html">
+        <div uk-lightbox class="px-8 py-16" style="background-color: #f1ebe2">
+          <a href="img/Video_1.mp4">
             <svg class="mx-auto" width="100" height="100" viewBox="0 0 100 100" fill="none"
               xmlns="http://www.w3.org/2000/svg" style="width: 115px; height: 115px;">
               <style>
@@ -436,10 +460,12 @@
               Videos
             </h2>
             <p>Work & Personal project</p>
-          </a><a href="img/More_2.jpg" data-lightbox="more"></a>
+          </a>
+          <a href="img/Video_2.mp4"> </a>
+          <a href="img/Video_4.mp4"> </a>
 
         </div>
-        <div class="px-8 py-16" style="background-color: #f1e2e2">
+        <div uk-lightbox class="px-8 py-16" style="background-color: #f1e2e2">
           <a href="img/Weblo 1.jpg" data-lightbox="weblo">
             <svg class="mx-auto" width="100" height="100" viewBox="0 0 100 100" fill="none"
               xmlns="http://www.w3.org/2000/svg" style="width: 112px; height: 112px">
@@ -517,13 +543,14 @@
               Web application, Digital Marketing, <br />
               E-commerce & Social Media
             </p>
-          </a><a href="img/Weblo 2.jpg" data-lightbox="weblo"></a>
+          </a>
+          <a href="img/Weblo 2.jpg" data-lightbox="weblo"></a>
           <a href="img/Weblo 3.jpg" data-lightbox="weblo"></a>
           <a href="img/Weblo 4.jpg" data-lightbox="weblo"></a>
           <a href="img/Weblo 5.jpg" data-lightbox="weblo"></a>
 
         </div>
-        <div class="px-8 py-16" style="background-color: #e1f0eb">
+        <div uk-lightbox class="px-8 py-16" style="background-color: #e1f0eb">
           <a href="img/HR_1.jpg" data-lightbox="pocket">
             <svg class="mx-auto" width="100" height="100" viewBox="0 0 100 100" fill="none"
               xmlns="http://www.w3.org/2000/svg" style="width: 121px; height: 121px;">
@@ -593,9 +620,10 @@
 
           <center>
             <a href="https://www.be-splendid.com/portfolio-edition" target="_blank">
-              <img src="img/besplendid-logo.png" class="object-center ">
+
+              <img src="img/besplendid-logo.png" class="object-center mb-2 ">
               <p>
-                UI & CMS
+                UI & Webflow <span class="animate-pulse"><b>&#8594;</b></span>
               </p>
             </a>
           </center>
@@ -608,7 +636,9 @@
             <a href="https://glass-museum-506a6a.webflow.io/" target="_blank">
               <img src="img/GM-logo.png" class="object-center mb-2 ">
               <p>
-                UI, Video Editing & CMS
+                UI, Video editing & Webflow <span class="animate-pulse"><b>&#8594;</b></span>
+
+
               </p>
             </a>
           </center>
@@ -710,9 +740,12 @@
       Copyright © 2023 Build with Tailwind by Rebecca
     </p>
   </footer>
+  <script src="js/uikit.js"></script>
 
-  <script src="js/lightbox-plus-jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <!--<script src="js/lightbox-plus-jquery.js"></script>-->
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.21.5/dist/js/uikit-icons.min.js"></script>
 
 </body>
 
