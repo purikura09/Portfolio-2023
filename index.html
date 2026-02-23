@@ -27,7 +27,7 @@
       font-family: "Inter", sans-serif;
     }
 
-    #home,
+
     #about,
     #footer {
       background-color: #1e1e1e;
@@ -84,6 +84,126 @@
 
     #me {
       display: none;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+      }
+
+      100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+      }
+    }
+
+    .background {
+      position: absolute;
+      z-index: -100;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      background: #2f344b;
+      overflow: hidden;
+    }
+
+    .background li {
+      position: absolute;
+      display: block;
+      list-style: none;
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      animation: animate 19s linear infinite;
+    }
+
+
+
+
+    .background li:nth-child(0) {
+      left: 15%;
+      width: 138px;
+      height: 138px;
+      bottom: -138px;
+      animation-delay: 1s;
+    }
+
+    .background li:nth-child(1) {
+      left: 22%;
+      width: 118px;
+      height: 118px;
+      bottom: -118px;
+      animation-delay: 3s;
+    }
+
+    .background li:nth-child(2) {
+      left: 76%;
+      width: 122px;
+      height: 122px;
+      bottom: -122px;
+      animation-delay: 10s;
+    }
+
+    .background li:nth-child(3) {
+      left: 1%;
+      width: 152px;
+      height: 152px;
+      bottom: -152px;
+      animation-delay: 7s;
+    }
+
+    .background li:nth-child(4) {
+      left: 37%;
+      width: 129px;
+      height: 129px;
+      bottom: -129px;
+      animation-delay: 17s;
+    }
+
+    .background li:nth-child(5) {
+      left: 31%;
+      width: 155px;
+      height: 155px;
+      bottom: -155px;
+      animation-delay: 23s;
+    }
+
+    .background li:nth-child(6) {
+      left: 37%;
+      width: 103px;
+      height: 103px;
+      bottom: -103px;
+      animation-delay: 11s;
+    }
+
+    .background li:nth-child(7) {
+      left: 28%;
+      width: 74px;
+      height: 74px;
+      bottom: -74px;
+      animation-delay: 16s;
+    }
+
+    .background li:nth-child(8) {
+      left: 60%;
+      width: 50px;
+      height: 50px;
+      bottom: -50px;
+      animation-delay: 8s;
+    }
+
+    .background li:nth-child(9) {
+      left: 14%;
+      width: 110px;
+      height: 110px;
+      bottom: -110px;
+      animation-delay: 45s;
     }
 
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
@@ -165,6 +285,20 @@
   </header>
   <!--SECTION 1-->
   <section id="home" class="h-screen w-full flex items-center place-content-center">
+
+    <ul class="background">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
     <div class="text-slate-50 text-center px-12">
 
       <video class="mx-auto size-52 rounded-2xl" autoplay muted loop>
